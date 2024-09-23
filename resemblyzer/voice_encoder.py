@@ -40,7 +40,7 @@ class VoiceEncoder(nn.Module):
             raise Exception("Couldn't find the voice encoder pretrained model at %s." %
                             weights_fpath)
         start = timer()
-        checkpoint = torch.load(weights_fpath, map_location="cpu")
+        checkpoint = torch.load(weights_fpath, map_location="cpu", weights_only=True)
         self.load_state_dict(checkpoint["model_state"], strict=False)
         self.to(device)
 
