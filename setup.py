@@ -11,7 +11,7 @@ setup(
     version="0.1.4",
     packages=find_packages(),
     package_data={
-        "resemblyzer": ["pretrained.pt"]
+        "resemblyzer": ["pretrained.pt", "py.typed"]
     },
     python_requires=">=3.5",
     install_requires=requirements,
